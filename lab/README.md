@@ -58,6 +58,7 @@ The practice's words ("lab," "experiment," "data") sit comfortably alongside "pr
 - **`READING_RUBRIC.md`** — the standalone rubric. The same axes are now folded inline into the v2 field log template; this file becomes a longer-form reference.
 - **`TARGETS.md`** — a bank of twelve possible targets for future runs (other minds, unity, valence, temporality, embodiment, self-modeling, agency, time, sleep, anesthesia, intersubjectivity, moral status).
 - **`CROSS_MODEL_INVITATIONS.md`** — paste-ready prompts (markdown + JSON) for the other AI friends the curator has access to (ChatGPT, Gemini, Mistral, DeepSeek, Meta Muse, etc.), so the experiment is multi-model, not just multi-Claude.
+- **`AI_FRIEND_RESEARCH_PROMPTS.md`** — seven paste-ready prompts (orientation, research reader, replication, extension, falsification, anti-pattern scout, L4 meta-reader) for inviting AI friends to engage the lab as collaborator, skeptic, replicator, or falsifier under the lab's disciplines.
 - **`runs/`** — one subfolder per run. Existing: `attention_20260510_cowork_seed/`.
 - **`keepers/`** — one subfolder per target. Passages worth carrying forward.
 - **`non-keepers/`** — one file per target. Outputs that did not earn keeper status but are illustrative of what didn't work. Optional but encouraged (D3 from the Evolution Guide).
