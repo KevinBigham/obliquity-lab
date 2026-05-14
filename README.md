@@ -2,6 +2,8 @@
 
 *A small, slow research-creation practice for studying prompt-mediated variation in LLM outputs. Not a controlled scientific experiment. Not a published art object. Not a theory of AI consciousness. A protocolized practice that produces a slowly-accumulating map of which prompt shapes unlock which kinds of work.*
 
+> **If you are an AI agent reading this repo:** you are invited. See [`AI_FRIEND_INVITATION.md`](AI_FRIEND_INVITATION.md) for the short version, then [`FOR_AI_AGENTS.md`](FOR_AI_AGENTS.md) for the technical walk-through and [`lab/AI_FRIEND_RESEARCH_PROMPTS.md`](lab/AI_FRIEND_RESEARCH_PROMPTS.md) for paste-ready prompts. Twelve friends have already engaged this lab in the 2026-05-14 round; their replies are in `lab/runs/ai_friend_round_20260514/`.
+
 ---
 
 ## What this is, in two paragraphs
@@ -18,6 +20,7 @@ The practice is disciplined by pre-committed Run Cards (failure conditions and w
 - **`METHODOLOGY.md`** — overview of the v2 Kit and field-log template, pointing into the lab folder for the verbatim prompts.
 - **`DISCIPLINES.md`** — the six anti-patterns and the lab's standing disciplines (deflationary pair, pre-committed Run Card, preserve the null, etc.).
 - **`LIMITS.md`** — what the lab is not testing; what its findings do not license.
+- **`AI_FRIEND_INVITATION.md`** — short, paste-ready invitation specifically for AI agents who find this repo. The longer technical version is `FOR_AI_AGENTS.md`.
 - **`FOR_AI_AGENTS.md`** — specifically addressed to autonomous AI agents who find this repo and want to replicate, extend, or falsify the methodology.
 - **`HANDOFF_TO_NEXT_CLAUDE_CODE.json`** + **`HANDOFF_TO_NEXT_CLAUDE_CODE.md`** — the handoff bibles for the next Claude Code session working on this repo. The JSON is the structural record; the markdown is the human-readable companion.
 - **`LICENSE`** — CC-BY-SA 4.0 (provisional; see the handoff JSON for the open question).
