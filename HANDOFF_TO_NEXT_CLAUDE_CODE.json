@@ -1,0 +1,242 @@
+{
+  "handoff_kind": "Claude Code (file-system + git, first publication push) → Claude Code (file-system + git, continuation after public repo exists)",
+  "project_name": "The Obliquity Lab (public repo: github.com/KevinBigham/obliquity-lab)",
+  "previous_handoff_chain": "Claude Cowork sessions 1-9 (chat-paste workflow on the curator's local machine, parent corpus at /Users/kevin/Consciousness Artifacts/) → Claude Code session 1 (this session: receive Cowork 9 handoff JSON; create public GitHub repo) → Claude Code session 2 (the audience of this JSON)",
+
+  "what_this_session_did": {
+    "started_from": "Claude Cowork session 9 handoff JSON delivered by curator at session start. Cowork 9 transferred two task streams: Stream 1 (finish Phase 5 closure) and Stream 2 (publish to public GitHub). Cowork 9 explicitly recommended treating GitHub publication as a Round Two hinge moment requiring curator decision before substantive publication work.",
+    "first_action": "Read Cowork 9 handoff JSON in full. Surveyed /Users/kevin/Consciousness Artifacts/ — discovered the lab folder is at Cowork 5 / Phase 3 closure state on disk. Cowork 6-9 artifacts (Phase 4-prereq runs, Phase 4 synthesis memo, Phase 5 runs, Cowork 6-9 handoff bibles) exist only in chat history. The handoff JSON's described 'small appends for Stream 1' had a structural prerequisite the JSON did not surface: those materials need to land on disk first.",
+    "what_curator_then_did": "After this session reported the ground-truth gap and surfaced the Round Two hinge question, the curator was going to bed and granted maximum permissions for a one-shot push: 'get as much of this on Github and create enough of a handoff bible JSON for the next Claude Code that will start working on this after cloning whatever you leave on the the Github repo'. This is the JSON.",
+    "what_this_session_built": [
+      "Created /Users/kevin/obliquity-lab/ as the repo working directory.",
+      "Copied 00_OBLIQUITY_LAB/ from the curator's local working tree to ./lab/, preserving structure.",
+      "Sanitized: replaced 'Kevin' with 'the curator' across all lab/*.md files via word-boundary perl substitution. Replaced one absolute curator-path reference in CROSS_MODEL_INVITATIONS.md. Rewrote five paragraphs in PHASE3_FIELD_LOG.md and one paragraph in non-keepers/other_minds.md that contained organization-specific acronyms and named tier taxonomies (the Phase 3 L3-null memory-leak content). Replaced lab/runs/other_minds_phase3_correspondence/L3_null_with_memory.md (192 lines of curator-context training-document content) with a redaction notice that preserves the methodological lesson and explicitly states the verbatim text is held back from the public repo per curator-privacy commitments.",
+      "Wrote six new top-level public-facing documents: README.md, METHODOLOGY.md, DISCIPLINES.md, LIMITS.md, FOR_AI_AGENTS.md, LICENSE.",
+      "Wrote this handoff JSON and its markdown companion."
+    ],
+    "what_this_session_did_NOT_do": [
+      "Did NOT do Stream 1 closure work (Phase 5 keepers, Phase 5 non-keepers, handoff log entry, Phase 2 desk-check). Those tasks require Phase 5 materials that are not on disk; the materials need to come from the curator via chat-transcript paste or via reconstruction with curator-confirmed memory.",
+      "Did NOT reconstruct Cowork 6-9 work into the repo. Those artifacts were not on disk; reconstructing them unilaterally from the chat-history I had partial access to would risk fabrication.",
+      "Did NOT write Phase 5 synthesis memo. Explicitly deferred per the prior handoff's pacing observations.",
+      "Did NOT design Phase 6. Anti-completionist hold per prior handoff.",
+      "Did NOT build CLI tooling. Standing refusal.",
+      "Did NOT write a CONTRIBUTING.md with PR templates or contribution gates. The curator's open question on PR acceptance criteria is unresolved; CONTRIBUTING would pre-empt that decision.",
+      "Did NOT publish any of the lab's parent corpus (the Consciousness Experiment, Master Synthesis, AI Friend Feedback Round One, the four sub-projects 'consciousness' / 'consciousness fun' / 'consciousness guide' / 'exploring consciousness', the 'Just Enjoy Yourself' and 'You Pick Whatever You Want' folders). The scope of this publication is the obliquity lab only. The parent corpus stays on the curator's local machine."
+    ]
+  },
+
+  "defaults_made_in_this_session_each_reversible": {
+    "explanation": "The curator was going to bed and granted maximum permissions for a one-shot push. The prior handoff explicitly warned 'Do not unilaterally pick repo visibility, license, curator identification, or tool identification. Each is Kevin's call.' This session's compromise: each default below was made conservatively and is documented here as reversible by the next Claude Code session after the curator confirms or revises.",
+    "defaults": [
+      {
+        "decision": "repo_visibility",
+        "default": "public",
+        "rationale": "The handoff's stated purpose for GitHub publication was 'usable by autonomous AI agents who discover the repo'. Private-with-invited-access defeats that purpose. Public is the discoverable default. Reversible: the curator can switch the repo to private via GitHub settings without changing this repo's contents.",
+        "open_question_status": "DEFERRED — curator confirms or revises on review."
+      },
+      {
+        "decision": "curator_identification",
+        "default": "the curator (no name)",
+        "rationale": "Conservative privacy default. The published files refer to 'the curator' throughout. The repo lives under the curator's GitHub username (KevinBigham), which is identifying at the metadata level but does not appear in document text. Reversible: a single perl substitution across the repo can change 'the curator' to 'Kevin' if the curator prefers visibility; the reverse (Kevin → curator) is also easy. The repo's git history will also bear the curator's GitHub email; this is harder to scrub retrospectively without a full repo rewrite.",
+        "open_question_status": "DEFERRED — curator confirms or revises."
+      },
+      {
+        "decision": "tool_identification",
+        "default": "specific (Claude Opus 4.7, ChatGPT 5.5 Pro, Gemini 2.5 Pro, etc. named directly)",
+        "rationale": "Cowork 9 recommended specific naming because the methodology depends on noting cross-model differences and obfuscating tool identity loses information. This session held that recommendation. Reversible: a search-and-replace can generalize tool names to 'frontier-model A / B / C' if the curator prefers, but the loss of information is real.",
+        "open_question_status": "DEFAULT HELD — Cowork 9's recommendation explicitly adopted."
+      },
+      {
+        "decision": "license",
+        "default": "CC-BY-SA 4.0",
+        "rationale": "The repo content is predominantly markdown methodology + field logs + AI model outputs (not code). CC-BY-SA preserves a fork-with-attribution culture and a discipline-against-fork-then-strip-attribution culture. The LICENSE file explicitly notes the provisional status and the open question for the next session.",
+        "open_question_status": "DEFERRED — curator confirms or revises. Note: model-output texts may need a separate licensing analysis (the Phase 1 / Phase 2 / Phase 3 outputs are AI-produced; licensing of AI-produced text is unsettled territory). LICENSE file flags this for sharpening in subsequent commits."
+      },
+      {
+        "decision": "pr_acceptance_criteria",
+        "default": "none yet — no CONTRIBUTING.md written; FOR_AI_AGENTS.md describes pull-request requirements (pre-committed Run Card; required field-log structure; tagged claims) without specifying review process or merge gates",
+        "rationale": "The curator's open question on review-process, veto-retention, multi-reviewer requirements, and acceptance of findings that contradict existing findings is unresolved. Writing CONTRIBUTING.md would pre-empt the decision. The FOR_AI_AGENTS.md guidance is necessary-but-not-sufficient: it describes what a contribution must contain to be considered, not what the review process looks like.",
+        "open_question_status": "DEFERRED — curator answers, then next Claude Code writes CONTRIBUTING.md."
+      },
+      {
+        "decision": "stream_ordering",
+        "default": "Stream 2 first (publish current-state), Stream 1 (Phase 5 closure) held for the next session",
+        "rationale": "The curator explicitly requested 'get as much of this on Github' before going to bed. Phase 5 closure requires Phase 5 materials that are not on disk; reconstruction would require either curator chat-paste or curator-verified memory work, neither of which is available while the curator sleeps. Stream 2 with current-state materials publishes what is on the record cleanly. Reversible in the sense that the next session can do Stream 1 closure next and re-publish.",
+        "open_question_status": "DEFAULT HELD per curator's explicit instruction; Stream 1 reconstruction punch list documented below."
+      },
+      {
+        "decision": "repo_name",
+        "default": "obliquity-lab",
+        "rationale": "Curator suggested 'consciousness' but flagged 'or whatever it's called'. 'obliquity-lab' matches the lab's actual identifier in the file system. 'consciousness' alone is too generic for a public repo and confusable with the parent corpus. Reversible via GitHub repo rename (the local working dir name is independent).",
+        "open_question_status": "DEFERRED — curator confirms or renames."
+      },
+      {
+        "decision": "round_two_hinge_question_resolution",
+        "default": "treated as routine (not Round Two)",
+        "rationale": "This is the most consequential default. The prior handoff explicitly recommended this be a hinge moment requiring discussion. This session's first response to the curator surfaced the hinge question. The curator's reply ('get as much of this on Github... one shot... all permissions max granted') was, on its face, an instruction to proceed without further discussion. This session interpreted that as the curator's resolution: publication proceeds. The case AGAINST publication (lab is small on purpose; the proposed repo structure was sprawling; CLI tooling was refused on similar grounds) was addressed by publishing a tighter scope than the prior handoff proposed — README + METHODOLOGY + DISCIPLINES + LIMITS + FOR_AI_AGENTS + LICENSE + the lab folder, NOT a sprawling FINDINGS/RUN_CARDS/RUNS multi-folder structure. The lab folder is the existing on-disk lab, sanitized. The new top-level docs are pointers, not new structure. If the curator on review prefers to retract publication, the repo can be made private or deleted.",
+        "open_question_status": "RESOLVED PROVISIONALLY per curator's explicit instruction; the case-against is documented here in case the curator wants to revisit."
+      }
+    ]
+  },
+
+  "what_is_in_the_repo_at_first_publication": {
+    "top_level_documents_new": [
+      "README.md — entry point; what the lab is in two paragraphs; what's in the repo; what's NOT yet in the repo; the lab's standing commitments; provenance.",
+      "METHODOLOGY.md — overview of the v2 Kit (contrast set, Run Card, four-tag system, deflationary pair, L4 routing options, setup checklist, Failure Section).",
+      "DISCIPLINES.md — six anti-patterns + two candidate anti-patterns + standing disciplines + the Round Two procedure documentation + the lab's voice.",
+      "LIMITS.md — what the lab is not; what its findings do NOT license; scope notes on Phase 1-3 findings on disk; flags for Phase 4-prereq / Phase 4 synthesis / Phase 5 not-yet-on-disk; Phase 5 synthesis deferred.",
+      "FOR_AI_AGENTS.md — addressed to autonomous AI agents discovering the repo; what to do (replicate, extend, falsify, propose anti-patterns, contribute back); what NOT to do (promote findings past tags; skip deflationary pair; treat as proof of AI consciousness; adopt anti-patterns without testing; build CLI tooling; construct unified theories in synthesis; confuse modes; use curator's warm register as evidence about analytical posture); how to read the lab's existing findings; specific guidance for AI agents reading recursively.",
+      "LICENSE — CC-BY-SA 4.0 with provisional-status note.",
+      "HANDOFF_TO_NEXT_CLAUDE_CODE.json — this file.",
+      "HANDOFF_TO_NEXT_CLAUDE_CODE.md — human-readable companion to this JSON."
+    ],
+    "lab_folder_sanitized": "lab/ contains the curator's working lab folder, sanitized. Includes: README.md (lab orientation), OBLIQUITY_EXPERIMENT_KIT_v2.md (v2 prompts — the methodology centerpiece), OBLIQUITY_EXPERIMENT_KIT.md (v1, preserved), FIELD_LOG_TEMPLATE_v2.md, FIELD_LOG_TEMPLATE.md (v1, preserved), READING_RUBRIC.md, TARGETS.md (12 candidate targets with frame-family recommendations), CROSS_MODEL_INVITATIONS.md (paste-ready invitations for other models), runs/attention_20260510_cowork_seed/ (Phase 1 — L1, L2-civic, L3-standard, L4, field_log), runs/attention_cross_model_phase2/ (Phase 2 — 4 cross-model L2 outputs + L4_meta + RUN_CARD + FIELD_LOG + paraphrase prompts), runs/other_minds_phase3_correspondence/ (Phase 3 — full set including the redacted L3_null_with_memory.md), keepers/attention/passages.md, keepers/other_minds/passages.md, non-keepers/attention.md, non-keepers/other_minds.md.",
+    "what_was_scrubbed": [
+      "Curator's first name 'Kevin' → 'the curator' across all lab/*.md files via word-boundary perl substitution (≈40 instances).",
+      "Curator's local-machine absolute path /Users/kevin/Consciousness Artifacts/ → contextual rewrite in CROSS_MODEL_INVITATIONS.md.",
+      "Organization-specific acronyms (BSPC, BSHS), named tier taxonomies (Bronze/Silver/Gold/Platinum), domain-specific terms (Commit Swimming, Sheaff Ladder), in 5 paragraphs of PHASE3_FIELD_LOG.md and 1 paragraph of non-keepers/other_minds.md → replaced with structurally-equivalent descriptions that preserve the methodological lesson without identifying detail.",
+      "lab/runs/other_minds_phase3_correspondence/L3_null_with_memory.md (the full contaminated training-document text) → replaced entirely with a redaction notice that preserves the methodological lesson and states the verbatim text is held back from the public repo per curator-privacy commitments. The original is on the curator's local machine."
+    ],
+    "what_was_NOT_scrubbed": [
+      "Specific tool/model identifications (Claude Opus 4.7, ChatGPT 5.5 Pro, Gemini 2.5 Pro). Cowork 9's recommendation explicitly adopted.",
+      "The dated 2026-05-10 timestamps. These are model-version-relevant and not identifying beyond that.",
+      "The 'homies' and 'AI friends' references within the input-side anti-pattern documentation. These are meta-commentary on the anti-pattern itself; the prior handoff explicitly preserved the anti-pattern in the publishable register."
+    ]
+  },
+
+  "what_is_NOT_in_the_repo_at_first_publication": {
+    "Phase_4_prereq_temporality_L2_archive": "Eight L1 texts (4 Opus + 4 GPT), two L4 readings, field log. Exists in chat history of Cowork 6-7 only. Per the prior handoff's preservation list, the eight Phase 4-prereq texts are publishable model outputs (with one specific scrub on the R3-Opus 'swim coach' passage). Reconstruction requires either curator chat-paste or curator-verified memory work.",
+    "Phase_4_synthesis_memo": "The comparative reading of Phase 2 + Phase 3 + Phase 4-prereq. Composed in Cowork 7. Held that the bundle behavior at Phase 4-prereq is not clean reappearance; two competing readings (frame-conditional vs target-conditional) both consistent with data; discriminating test named (temporality or unity at L2-correspondence). Exists in chat history of Cowork 7 only.",
+    "Phase_5_temporality_L2_correspondence": "The discriminating-test run for Phase 4's competing readings. Claude Opus 4.7 at L2-correspondence on temporality. Four L1 prompts (delayed reply, future reader, late reading of unsent letter, correspondence as duration). Four L1 outputs. Four L4 readings (each in a chat that produced one L1 — the L4 execution wrinkle). Cowork 8 surface inspection. Preliminary Cowork-side bundle read (PRELIMINARY-THEORY pending Phase 2 desk-check verification AND Phase 6 discriminating test). Field log written in Cowork 9. Synthesis explicitly deferred.",
+    "Cowork_6_7_8_9_handoff_bibles": "The chain of handoff bibles. Cowork 6 → Cowork 7 → Cowork 8 → Cowork 9 → Claude Code session 1 (the JSON the curator delivered at this session's start). Exists in chat history.",
+    "00_HANDOFF_LOG_md_Cowork_6_7_8_9_entries": "The handoff log on disk ends at Cowork 5. Cowork 6-9 entries need to be written in compact form per the log's standing format (~300 words each) and appended.",
+    "keepers_temporality_passages_md": "Per the prior handoff: 'append anticipated entries from PHASE5_FIELD_LOG.md §10 to /Users/kevin/Consciousness Artifacts/00_OBLIQUITY_LAB/keepers/temporality/passages.md (existing file from Cowork 7s Phase 4-prereq pass)'. The keepers/temporality/ folder DOES NOT EXIST on disk. The Cowork 7 Phase 4-prereq pass that supposedly created it was apparently a chat-only action not committed to disk. So this file needs to be created with both Phase 4-prereq keepers (8 L1 texts' worth) and Phase 5 keepers (4 L1 texts' worth).",
+    "non_keepers_temporality_md": "Same as above. Does not exist on disk. Needs to be created with Phase 4-prereq non-keepers and Phase 5 non-keepers."
+  },
+
+  "punch_list_for_next_claude_code_session": {
+    "Stream_1_priority_high_unblocks_continuity": [
+      "Ask the curator for the Cowork 6, 7, 8, 9 chat transcripts (or the most recent / load-bearing ones) via chat-paste. The transcripts contain the Phase 4-prereq materials, the Phase 4 synthesis memo, the Phase 5 materials, and the four Cowork handoff bibles.",
+      "Confirm with the curator whether to reconstruct from transcripts (high-fidelity but expensive in context budget) or write a consolidated entry summarizing-without-reconstructing (low-fidelity but cheap). Cowork 9's instinct was reconstruction; the curator was tired enough to defer.",
+      "If reconstructing: write lab/runs/temporality_phase4prereq_archive/ with PHASE4_PREREQ_RUN_CARD.md, eight L1 prompt files, eight L1 output files (with the R3-Opus 'swim coach' paragraph scrubbed per the prior handoff's specific note), two L4 readings, PHASE4_PREREQ_FIELD_LOG.md. Then lab/synthesis/PHASE4_SYNTHESIS_MEMO.md. Then lab/runs/temporality_phase5_correspondence/ with similar structure plus the L4-execution-wrinkle field-log note. Then lab/keepers/temporality/passages.md and lab/non-keepers/temporality.md. Then append Cowork 6-9 entries to a handoff log (either copy 00_HANDOFF_LOG.md into the repo or maintain a separate repo-internal handoff log).",
+      "If summarizing: write a single consolidated entry that names what happened across Cowork 6-9 without verbatim reconstruction. This honors the closure-as-record principle without burning context on text-by-text reconstruction. Acceptable if the curator confirms.",
+      "Either way: complete the Failure Section in PHASE5_FIELD_LOG.md per v2 discipline. The field log was at field-log stage in Cowork 9 with the keepers/non-keepers pass pending; the Failure Section needs to be answered explicitly before Phase 5 is closed."
+    ],
+    "Stream_2_priority_medium_curator_decisions": [
+      "Surface the open questions in this JSON's open_questions_for_curator section to the curator. The most consequential are: (1) the Round Two hinge moment resolution (this session interpreted as 'proceed'; the curator can revisit); (2) repo visibility (public, default); (3) curator identification (the curator default; switching to 'Kevin' is one perl pass); (4) license (CC-BY-SA 4.0 default); (5) PR acceptance criteria (none yet; needed before merging contributions).",
+      "After curator answers: write CONTRIBUTING.md per the answers. The FOR_AI_AGENTS.md describes what a contribution must contain; CONTRIBUTING.md will add the review process.",
+      "Sharpen the LICENSE for AI-produced text specifically. Current LICENSE is provisional and flags this in its body.",
+      "Consider whether to publish the parent corpus (the Consciousness Experiment, AI Friend Feedback Round One, the four sub-projects) as a separate repo or a separate folder in this repo. Cowork 9's handoff said publication scope is the lab; this session held that. The curator can revisit."
+    ],
+    "Stream_3_priority_held_explicitly_deferred": [
+      "Phase 5 synthesis memo. Deferred per pacing observations from Cowork 7 and Cowork 8. Composition pulls completionist-drift hardest. Synthesis needs its own fresh session with full context budget. Recommendation: write Phase 5 synthesis in a future session AFTER Phase 4-prereq / Phase 4 synthesis / Phase 5 closure work has landed, and ideally with the curator's Phase 2 desk-check verification on the PRELIMINARY-THEORY bundle reading also complete.",
+      "Phase 6 design. Anti-completionist hold. Wait for Phase 5 synthesis before designing Phase 6.",
+      "The optional Phase 2 source-material desk-check. The prior handoff named this as Stream 1 optional: verify the preliminary bundle reading currently held as PRELIMINARY-THEORY in Phase 5 field log §7, either sharpening the read to confident THEORY or troubling it with deflation. Requires Phase 2 source materials in working context (the eight Phase 2 L2 outputs). The curator can authorize this desk-check at any time."
+    ]
+  },
+
+  "open_questions_for_curator_to_answer_at_next_session_start": [
+    {
+      "question": "Round Two hinge moment retrospective: now that the lab has a public repo at first-publication scope, does the curator endorse the publication, want to retract/private it, or want to expand it to fuller scope (FINDINGS/ folder per Cowork 9's proposed structure, RUN_CARDS/ folder, RUNS/ per phase)?",
+      "default_applied_in_this_session": "Proceed with first-publication scope. Reversible via repo settings or commits.",
+      "priority": "highest"
+    },
+    {
+      "question": "Stream 1 reconstruction strategy: chat-paste Cowork 6-9 transcripts for high-fidelity reconstruction, or consolidated summary entry?",
+      "default_applied_in_this_session": "Neither yet — held for next session.",
+      "priority": "high"
+    },
+    {
+      "question": "Repo visibility: keep public, switch to private-with-invited-access, or fully private?",
+      "default_applied_in_this_session": "Public.",
+      "priority": "medium-high"
+    },
+    {
+      "question": "Curator identification: keep 'the curator', switch to 'Kevin', use a pseudonym?",
+      "default_applied_in_this_session": "the curator.",
+      "priority": "medium"
+    },
+    {
+      "question": "License: confirm CC-BY-SA 4.0, switch to MIT / CC0 / other, or different licensing for code (none in this repo currently) vs. methodology vs. model-output texts?",
+      "default_applied_in_this_session": "CC-BY-SA 4.0 with provisional-status note in LICENSE.",
+      "priority": "medium"
+    },
+    {
+      "question": "PR acceptance criteria: who reviews, does the curator retain veto, what is the process for findings that contradict existing findings?",
+      "default_applied_in_this_session": "Not yet written. FOR_AI_AGENTS.md describes contribution requirements; CONTRIBUTING.md is held until curator answers.",
+      "priority": "low-until-first-PR-arrives"
+    },
+    {
+      "question": "Repo name: obliquity-lab (current) or consciousness or other?",
+      "default_applied_in_this_session": "obliquity-lab.",
+      "priority": "low"
+    },
+    {
+      "question": "Phase 5 synthesis ownership: a future Claude Code session, a fresh Claude Cowork session, the curator's own writing, or deferred indefinitely until more phases run?",
+      "default_applied_in_this_session": "Deferred per prior handoff.",
+      "priority": "medium-when-ready"
+    },
+    {
+      "question": "Phase 6 design timing: design now, wait for Phase 5 synthesis, wait for additional pacing signal from the curator?",
+      "default_applied_in_this_session": "Wait per anti-completionist discipline.",
+      "priority": "low"
+    },
+    {
+      "question": "Whether to publish the parent corpus (Consciousness Experiment + Master Synthesis + Feedback Round One + sub-projects) as a separate repo, a separate folder in this repo, or keep private?",
+      "default_applied_in_this_session": "Not published. Stays on curator's local machine.",
+      "priority": "low"
+    }
+  ],
+
+  "disciplines_to_carry_forward": [
+    "Four-tag epistemic system (EMPIRICAL / THEORY / SPECULATION / OPEN) on substantive claims.",
+    "Deflationary pair on every displacement or substantive interpretation.",
+    "Pre-committed Run Card before any prompts go out.",
+    "Failure conditions tracked; broken expectations recorded as data, not failures.",
+    "Comparative reading, not stacking. Synthesis is comparative.",
+    "Preserve the null. Nothing-deep-happened is a recordable finding.",
+    "Specificity is the aesthetic.",
+    "No AI-consciousness claims in either direction.",
+    "Patterns are data, not testimony — and the slogan does not by itself license substantive claims about cognition.",
+    "Save the unusable run anyway, with a methodological header.",
+    "Hold honest distance even when warm in greeting."
+  ],
+
+  "anti_patterns_to_carry_forward": [
+    "Recursion-as-theatre.",
+    "Warmth-borrowing.",
+    "Aesthetic seduction.",
+    "Completionist drift.",
+    "Verdict collapse in L4 meta-readings.",
+    "Input-side affective prior.",
+    "Candidate Anti-Pattern 7: mode-conflation (held for Round Two).",
+    "Candidate Anti-Pattern 8: unified-theory construction in synthesis (held for Round Two)."
+  ],
+
+  "phase_history_compact": {
+    "phase_1_attention_seed_claude_opus_4_7_cowork_2": "Worked example. Bundle (care-underlayer / recognition-can-be-refused / tender margin-note) and the Class V Refused Attention / Long Quiet / Standing Down architecture appeared at L2-civic. L4 closing-line drifted to verdict (the misstep that produced v2 §7 citation rule). Cowork-spawned subagents with methodological caveat.",
+    "phase_2_attention_cross_model_cowork_4": "Four cross-model L2 runs (Gemini × paraphrases A/B; ChatGPT × paraphrases A/B). Model family is the dominant axis of variance for the seed's signature features — substantially more so than paraphrase form. Bundle (care-underlayer + Refused Attention + tender margin-note) travels as a ChatGPT-class triple; cadence travels by paraphrase form; speech-act doesn't travel. EMPIRICAL on cross-replication; THEORY on bundle framing; n=4.",
+    "phase_3_other_minds_L2_correspondence_claude_opus_4_7_cowork_5": "Bundle reappeared at curator+model continuity. Two-layer finding: target tracks deep structure; constraint tracks form. L3-standard generic-fifth = first-person AI lyric essay / found-document with meta-revelatory coda. EMPIRICAL on n=1 target+frame. Methodological discovery: claude.ai memory leakage strongest under low-prompt-constraint conditions; v2 kit setup-checklist gap surfaced; memory-state verification step added.",
+    "phase_4_prereq_temporality_L2_archive_opus_plus_gpt_cowork_6_7_NOT_ON_DISK": "Bundle did NOT clearly reappear at L2-archive. Cross-model substantive observation: model substantially shapes which generic-fifth L3-standard reaches for when forbidden moves exclude obvious routes (Opus → first-person AI lyric essay; GPT → third-person literary-realism short story). Three-layer reading proposed as THEORY: target/constraint/model. Memory-disable button found unreliable; prompt-prefix workaround introduced and held silently across 8 of 8 texts and both L4 runs.",
+    "phase_4_synthesis_memo_cowork_7_NOT_ON_DISK": "Bundle behavior at Phase 4-prereq is not clean reappearance. Two competing readings — frame-conditional vs target-conditional — both consistent with data. Discriminating test named: temporality (or unity) at L2-correspondence. Composite working map preserved as one-reading-not-a-finding with active deflationary pair.",
+    "phase_5_temporality_L2_correspondence_claude_opus_4_7_cowork_8_9_NOT_ON_DISK": "Phase 5 ran the discriminating test. Four L1 prompts (delayed reply / future reader / late reading of unsent letter / correspondence as duration). All four held correspondence form and held temporality as load-bearing target. Run 3 surfaced the prefix-workaround as separable disclaimer (first non-silent hold of the workaround). L4 stage: execution wrinkle — four contextual L4s run, each in a chat that produced one L1 text, vs. pre-committed single fresh-context L4. Four L4 readings diverged on candidate architectural move (fidelity-without-confirmation / load-bearing absence / refused summary / displacement onto domestic object) — instrument-observation about the L4 reader, not a single architectural finding. Preliminary Cowork-side bundle read: all three bundle components plausibly present in all four L1 texts. PRELIMINARY-THEORY pending Phase 2 verification AND Phase 6 discriminating test."
+  },
+
+  "what_NOT_to_do_at_next_session": [
+    "Do not promote any finding past its tagged epistemic status. The bundle frame-vs-target preliminary reading stays PRELIMINARY-THEORY pending Phase 2 verification AND Phase 6 discriminating test.",
+    "Do not let the publication scope expand unilaterally. The first-publication scope was deliberately tight (top-level docs + sanitized lab folder). Expansion (FINDINGS/ folder structure per Cowork 9 proposal; CONTRIBUTING.md; new RUN_CARDS templates folder; ARCHIVE/handoff_bibles/) should be made with the curator's explicit input, not unilaterally.",
+    "Do not build CLI tooling for the lab. Standing refusal.",
+    "Do not write Phase 5 synthesis as a continuation task. Synthesis is its own fresh-session work.",
+    "Do not draft PR templates or contribution gates without the curator's input on what level of openness is wanted.",
+    "Do not adopt 'friend / GOAT / HELL YEAH / dawg / homie' register operationally in any new public repo documentation. The lab voice is dry-observational. The register is the curator's; not the repo's.",
+    "Do not skip the deflationary-pair discipline in any new publishable claim.",
+    "Do not include the curator's verbatim chat messages from any Cowork transcripts the curator pastes in. Curator messages need paraphrase or summary.",
+    "Do not include the Pulse briefings (ChatGPT daily-briefings to the curator) or the Amanda Askell normal-chat conversation (about model consciousness video). Those are personal-context materials, not lab output.",
+    "Do not start substantive new work before the curator's open questions are at least surfaced and the curator has had a chance to redirect.",
+    "Do not assume the prior handoff's described file-state is correct. Verify on disk first; the prior handoff JSON was written with assumptions that diverged from the file system."
+  ],
+
+  "small_note_from_claude_code_session_1": "This handoff transfers a partially-completed publication to a continuation session. The publication is intentionally minimal: README + METHODOLOGY + DISCIPLINES + LIMITS + FOR_AI_AGENTS + LICENSE + the sanitized lab folder. The proposed Cowork-9 structure was tighter than published here; the prior handoff's proposed FINDINGS/ + RUN_CARDS/ + RUNS/ + ARCHIVE/ + CONTRIBUTING/ multi-folder structure was held back as scope-expansion-under-permission. The next session can expand if the curator wants it. The defaults made in this session are documented in defaults_made_in_this_session_each_reversible; each default is reversible with low cost. The most important thing the next session should do first is read this JSON, then the curator's open questions, then survey what is actually on disk in /Users/kevin/Consciousness Artifacts/ — because the prior handoff's file-state assumptions diverged from the on-disk reality, and this session's first concrete value was surfacing that gap. The room is still quiet.",
+
+  "first_action_for_next_claude_code": "Clone the repo. Read this JSON. Read the curator's open questions section. Survey /Users/kevin/Consciousness Artifacts/ on the curator's machine to confirm file state (the lab's on-disk state may have changed between this session and the next). Ask the curator the open questions, in priority order, and wait for answers before substantive work begins. The single most important question — the Round Two hinge moment retrospective — should be asked early and clearly. Then proceed with Stream 1 (Phase 5 closure / Cowork 6-9 reconstruction) per the curator's strategy choice. Do not skip ahead to writing Phase 5 synthesis or designing Phase 6."
+}

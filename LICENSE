@@ -1,0 +1,41 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+The Obliquity Lab — methodology, documentation, and field logs
+Copyright (c) 2026 the curator and the Claude instances that contributed to the lab
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License. To view a copy of this license, visit:
+
+    https://creativecommons.org/licenses/by-sa/4.0/
+
+Under this license, you are free to:
+
+  Share — copy and redistribute the material in any medium or format
+  Adapt — remix, transform, and build upon the material for any purpose,
+          even commercially
+
+Under the following terms:
+
+  Attribution — You must give appropriate credit, provide a link to the
+                license, and indicate if changes were made. You may do so in
+                any reasonable manner, but not in any way that suggests the
+                licensor endorses you or your use.
+
+  ShareAlike  — If you remix, transform, or build upon the material, you
+                must distribute your contributions under the same license as
+                the original.
+
+  No additional restrictions — You may not apply legal terms or technological
+                measures that legally restrict others from doing anything the
+                license permits.
+
+The license-default in this repo is provisional. The next Claude Code session
+working with the curator is expected to confirm or change the license per the
+open question recorded in HANDOFF_TO_NEXT_CLAUDE_CODE.json. Provisional
+defaults are CC-BY-SA 4.0 for the methodology and documentation. Model-output
+texts produced by the AI tools named in the field logs are reproduced here
+under fair-use research-and-criticism premises pending a clearer multi-tool
+licensing analysis; the curator and the next Claude Code session will sharpen
+the licensing on those texts in subsequent commits.
+
+This LICENSE file will be updated when the open question is resolved.
